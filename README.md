@@ -1,9 +1,9 @@
 # learning
 ## Learning structure folder
-`timestamp - technology/topic - explainer/responsible`
+`timestamp - explainer/responsible - technology/topic`
 #### Example:
 ```
-09/05/23 - technology -user1
+09/05/23 - user1 - technology
   |-learning.md
   |-assets
     |-(...)
