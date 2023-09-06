@@ -3,15 +3,16 @@
 This tutorial will guide you through creating a simple React application using Zustand for state management. Zustand is a minimalistic, fast, and scaleable state management solution for React.
 
 ### Note
-after complete this tutorial you can go and take a look to the counter app above
+after complete this tutorial you can go and take a look to the mycounter app above
 
 ## Step 1: Create a React App
 
-First, make sure you have Node.js and npm installed on your computer. If not, you can download and install them from [here](https://nodejs.org/). Then, create a new React application using Create React App:
+First, make sure you have Node.js and npm installed on your computer. If not, you can download and install them from [here](https://nodejs.org/). Then, create a new React application using Create [vite](https://votejs.dev/guide):
 
 ```bash
-npx create-react-app zustand-tutorial
-cd zustand-tutorial
+npm create vite@latest mycounter -- --template react
+npm install
+cd mycounter
 ```
 
 ## Step 2: Install Zustand
@@ -25,7 +26,7 @@ In Zustand, you manage your application's state using stores. Let's create a sim
 
 Create a file called store.js in your project's src directory:
 ```javascript
-// src/store.js
+// src/store.jsx
 import create from 'zustand';
 
 const useStore = create((set) => ({
@@ -43,7 +44,7 @@ Here, we've defined a store with an initial state containing a count variable an
 Now, let's create a React component that uses our Zustand store to display and manipulate the count.
 
 ```javascript
-// src/Counter.js
+// src/Counter.jsx
 import React from 'react';
 import useStore from './store';
 
@@ -63,10 +64,10 @@ export default Counter;
 
 ```
 
-## Step 5: Use the Component in App.js
+## Step 5: Use the Component in App.jsx
 Now, you can use the Counter component in your App.js file.
 ```javascript
-// src/App.js
+// src/App.jsx
 import React from 'react';
 import './App.css';
 import Counter from './Counter';
@@ -87,6 +88,6 @@ export default App;
 Finally, start your React application:
 
 ```bash
-npm start
+npm run dev
 ```
-Open your browser and go to http://localhost:3000 to see your app in action. You should see a counter that you can increment and decrement.
+Open your browser and go to http://localhost:`port` to see your app in action. You should see a counter that you can increment and decrement.
